@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For my Aya 🤍</title>
+  <style>
+    :root {
+      --pink: #ff2e63;
+      --bg1: #ff758c;
+      --bg2: #ff7eb3
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      animation: fadeIn 1.2s ease
+    }
+
+    .container {
+      padding: 16px
+    }
+
+    .buttons {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    button {
+      padding: 14px 26px;
+      font-size: 18px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: .25s ease
+    }
+
+    #yesBtn {
+      background: var(--pink);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .25)
+    }
+
+    #noBtn {
+      background: #eee;
+      color: #111
+    }
+
+    #letter {
+      display: none;
+      margin: 28px auto 0;
+      font-size: 1.15rem;
+      max-width: 760px;
+      line-height: 1.8;
+      min-height: 120px
+    }
+
+    #finalMessage {
+      display: none;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin-top: 18px
+    }
+
+    .gallery {
+      display: none;
+      margin: 22px auto 0;
+      max-width: 1000px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px
+    }
+
+    .grid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+      transition: .25s
+    }
+
+    .grid img:hover {
+      transform: scale(1.06)
+    }
+
+    /* timeline */
+    .timeline {
+      display: none;
+      margin: 26px auto 0;
+      max-width: 800px;
+      text-align: left
+    }
+
+    .tl-item {
+      background: rgba(255, 255, 255, .15);
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 8px 0
+    }
+
+    /* overlay */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10
+    }
+
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 18px;
+      max-width: 420px;
+      width: 92%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .5)
+    }
+
+    .card h2 {
+      margin: 0 0 8px
+    }
+
+    .progress {
+      height: 8px;
+      background: #333;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: var(--pink);
+      transition: width .3s
+    }
+
+    /* secret */
+    #secret {
+      display: none;
+      margin-top: 18px
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 70%;
+      max-width: 260px
+    }
+
+    /* hearts */
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall linear forwards
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="title">Hey Ayouya🤍 Are you excited for our first Eid together?</h1>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes 🤍</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+
+    <div id="letter"></div>
+    <div id="finalMessage">my cootie bootie 🤍</div>
+
+    <div class="gallery">
+      <div class="grid">
+        <img src="photo1.jpg" alt="1">
+        <img src="photo2.jpg" alt="2">
+        <img src="photo3.jpg" alt="3">
+        <img src="4.jpg" alt="4">
+        <img src="5.jpg" alt="5">
+        <img src="6.jpg" alt="6">
+        <img src="7.jpg" alt="7">
+        <img src="8.jpg" alt="8">
+        <img src="9.jpg" alt="9">
+        <img src="10.jpg" alt="10">
+        <img src="11.jpg" alt="11">
+        <img src="12.jpg" alt="12">
+      </div>
+    </div>
+
+    <div class="timeline" id="timeline">
+      <div class="tl-item">Forever will be my person insha'allah ayouyty🤍</div>
+      <div class="tl-item">Will always be grateful for you my ayouya🤍</div>
+      <div class="tl-item">First Eid of forever Eids together insha'allah ayouya🤍</div>
+    </div>
+
+    <div id="secret">
+      <p>One last thing… enter our favorite sticker name 🔐</p>
+      <input id="secretInput" placeholder="your inside word">
+    </div>
+  </div>
+
+  <!-- overlay loading -->
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <h2>Analyzing your answer… 🤖💘</h2>
+      <div class="progress">
+        <div class="bar" id="bar"></div>
+      </div>
+      <p id="status">Checking compatibility…</p>
+    </div>
+  </div>
+
+  <audio id="music" src="music.mp3"></audio>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const letter = document.getElementById('letter');
+    const gallery = document.querySelector('.gallery');
+    const timeline = document.getElementById('timeline');
+    const title = document.getElementById('title');
+    const music = document.getElementById('music');
+    const finalMessage = document.getElementById('finalMessage');
+    const overlay = document.getElementById('overlay');
+    const bar = document.getElementById('bar');
+    const status = document.getElementById('status');
+    const secret = document.getElementById('secret');
+    const secretInput = document.getElementById('secretInput');
+
+    let noClickCount = 0;
+
+    const noTexts = [
+      'No 😢', 'Are you sure? 🥺', 'Really sure?? 😭', 'Think again 💔', 'Please?? 🥹', 'You\'re breaking my heart 💔', 'Last chance 😭'
+    ];
+
+    const message = `since 25/1, everything changed... 🤍\n\nYou make my world brighter, my days better, days easier, happier and my life more meaningful.\n\nEvery memory with you is something I cherish deeply and highly appreciate your existence.\n\n`;
+
+    function typeWriter(text, i = 0) {
+      if (i < text.length) {
+        letter.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
+        setTimeout(() => typeWriter(text, i + 1), 26);
+      }
+    }
+
+    function createHearts(n = 40) {
+      for (let i = 0; i < n; i++) {
+        const h = document.createElement('div');
+        h.className = 'heart';
+        h.innerHTML = '💖';
+        h.style.left = Math.random() * 100 + 'vw';
+        h.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        document.body.appendChild(h);
+        setTimeout(() => h.remove(), 5000);
+      }
+    }
+
+    function runFakeLoader(done) {
+      overlay.style.display = 'flex';
+      let p = 0; const steps = [
+        'Checking compatibility…', 'Scanning memories…', 'Calculating happiness…', 'Verifying love levels…', 'Finalizing result…'
+      ];
+      const int = setInterval(() => {
+        p += Math.random() * 18; if (p > 100) p = 100;
+        bar.style.width = p + '%';
+        status.textContent = steps[Math.min(steps.length - 1, Math.floor(p / 20))];
+        if (p === 100) { clearInterval(int); setTimeout(() => { overlay.style.display = 'none'; done && done(); }, 700); }
+      }, 220);
+    }
+
+    noBtn.addEventListener('click', () => {
+      noClickCount++;
+      const size = 18 + noClickCount * 12;
+      yesBtn.style.fontSize = size + 'px';
+      yesBtn.style.padding = (14 + noClickCount * 6) + 'px';
+      if (noClickCount < noTexts.length) { noBtn.innerText = noTexts[noClickCount]; }
+      noBtn.style.position = 'absolute';
+      noBtn.style.top = Math.random() * (window.innerHeight - 40) + 'px';
+      noBtn.style.left = Math.random() * (window.innerWidth - 80) + 'px';
+    });
+
+    yesBtn.addEventListener('click', () => {
+      runFakeLoader(() => {
+        document.querySelector('.buttons').style.display = 'none';
+        letter.style.display = 'block';
+        gallery.style.display = 'block';
+        timeline.style.display = 'block';
+        finalMessage.style.display = 'block';
+        secret.style.display = 'block';
+        title.innerText = "I knew you'd say yes 😌🤍";
+        music.play().catch(() => { });
+        createHearts(60);
+        typeWriter(message);
+      });
+    });
+
+    // secret unlock
+    const SECRET_WORD = 'tamer hosny'; // change this to your inside word
+    secretInput.addEventListener('input', () => {
+      if (secretInput.value.trim().toLowerCase() === SECRET_WORD) {
+        finalMessage.textContent = 'Forever us 🤍';
+        createHearts(80);
+      }
+    });
+  </script>
+</body>
+
+</html>
